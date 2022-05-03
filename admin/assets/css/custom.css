@@ -1,0 +1,231 @@
+body {
+    padding-top: 70px;
+}
+
+.glyphicon {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.clearer {
+    line-height: 30px !important;
+}
+
+td.high_prio {
+    background: #FFD3A8 !important;
+}
+
+#ticketFilter {
+    margin-top: -5px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#ticketFilter input, #ticketFilter select, #ticketFilter .btn {
+    font-size: 12px;
+    height: 30px;
+}
+
+#ticketFilter .btn {
+    padding: 0;
+}
+
+#form-header {
+    margin-bottom: 15px;
+}
+
+.form-horizontal .form-group {
+    margin-right: 0;
+}
+
+body {
+    font-size: 12px;
+}
+
+.btn {
+    font-size: 12px;
+}
+
+.ui-dialog .ui-dialog-title {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 3px;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    top: 65%;
+}
+
+#successBox {
+    width: auto !important;
+    min-width: 500px;
+    right: 50px;
+    top: 55px !important;
+    z-index: 99999;
+}
+
+.container {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+.span2 {
+    width: 150px;
+}
+
+.span6 {
+    width: 310px;
+}
+
+.pagination {
+    margin: 0;
+}
+
+.ui-tooltip {
+    font-size: 13px;
+}
+
+/* CSS SPINNER */
+#facebookG {
+    width: 128px
+}
+
+.facebook_blockG {
+    background-color: #B1C0E0;
+    border: 3px solid #528FEB;
+    float: left;
+    height: 200px;
+    margin-left: 7px;
+    width: 24px;
+    opacity: 0.1;
+    -moz-animation-name: bounceG;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: linear;
+    -moz-transform: scale(0.7);
+    -webkit-animation-name: bounceG;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: linear;
+    -webkit-transform: scale(0.7);
+    -ms-animation-name: bounceG;
+    -ms-animation-duration: 0.5s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-direction: linear;
+    -ms-transform: scale(0.7);
+    -o-animation-name: bounceG;
+    -o-animation-duration: 0.5s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction: linear;
+    -o-transform: scale(0.7);
+    animation-name: bounceG;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+    transform: scale(0.7);
+}
+
+#blockG_1 {
+    -moz-animation-delay: 0.15s;
+    -webkit-animation-delay: 0.15s;
+    -ms-animation-delay: 0.15s;
+    -o-animation-delay: 0.15s;
+    animation-delay: 0.15s;
+}
+
+#blockG_2 {
+    -moz-animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+#blockG_3 {
+    -moz-animation-delay: 0.25s;
+    -webkit-animation-delay: 0.25s;
+    -ms-animation-delay: 0.25s;
+    -o-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+@-moz-keyframes bounceG {
+    0% {
+        -moz-transform: scale(1.2);
+        opacity: 1
+    }
+
+    100% {
+        -moz-transform: scale(0.7);
+        opacity: 0.1
+    }
+
+}
+
+@-webkit-keyframes bounceG {
+    0% {
+        -webkit-transform: scale(1.2);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(0.7);
+        opacity: 0.1
+    }
+
+}
+
+@-ms-keyframes bounceG {
+    0% {
+        -ms-transform: scale(1.2);
+        opacity: 1
+    }
+
+    100% {
+        -ms-transform: scale(0.7);
+        opacity: 0.1
+    }
+
+}
+
+@-o-keyframes bounceG {
+    0% {
+        -o-transform: scale(1.2);
+        opacity: 1
+    }
+
+    100% {
+        -o-transform: scale(0.7);
+        opacity: 0.1
+    }
+
+}
+
+@keyframes bounceG {
+    0% {
+        transform: scale(1.2);
+        opacity: 1
+    }
+
+    100% {
+        transform: scale(0.7);
+        opacity: 0.1
+    }
+
+}
+
+/* END OF CSS SPINNER */
+
+.table-ticket > thead > tr > th,
+.table-ticket > tbody > tr > th,
+.table-ticket > tfoot > tr > th,
+.table-ticket > thead > tr > td,
+.table-ticket > tbody > tr > td,
+.table-ticket > tfoot > tr > td {
+    border-top: none;
+    padding-top: 5px;
+    padding-bottom: 0px;
+}

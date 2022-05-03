@@ -1,0 +1,2400 @@
+
+Notice
+Use of undefined constant TBL_USER_LOGIN - assumed 'TBL_USER_LOGIN'
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.user.inc.php
+Line34
+-----------------------------------------------------------------------------
+Database Error
+Function: User::auth / Backend_Controller::__construct / Dashboard_Controller::__construct
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT * FROM TBL_USER_LOGIN WHERE username = 'root' AND parent_id = '0' AND deleted = '0']
+[Native code: 1146]
+[Native message: Table 'appslifesiteat.TBL_USER_LOGIN' doesn't exist]
+
+-----------------------------------------------------------------------------
+Notice
+Use of undefined constant TBL_USER_LOGIN - assumed 'TBL_USER_LOGIN'
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.user.inc.php
+Line34
+-----------------------------------------------------------------------------
+Database Error
+Function: User::auth / Backend_Controller::__construct / Dashboard_Controller::__construct
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT * FROM TBL_USER_LOGIN WHERE username = 'root' AND parent_id = '0' AND deleted = '0']
+[Native code: 1146]
+[Native message: Table 'appslifesiteat.TBL_USER_LOGIN' doesn't exist]
+
+-----------------------------------------------------------------------------
+Notice
+Undefined index: user_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.user.inc.php
+Line42
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/class.utils.inc.php
+Line732
+-----------------------------------------------------------------------------
+Warning
+Missing argument 2 for Dashboard_Model::__construct(), called in /var/www/vhosts/apps.lifesite.at/htdocs/inc/controllers/class.dashboard_controller.inc.php on line 13 and defined
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/models/class.dashboard_model.inc.php
+Line8
+-----------------------------------------------------------------------------
+Warning
+Missing argument 2 for Dashboard_Model::__construct(), called in /var/www/vhosts/apps.lifesite.at/htdocs/inc/controllers/class.dashboard_controller.inc.php on line 13 and defined
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/models/class.dashboard_model.inc.php
+Line8
+-----------------------------------------------------------------------------
+Warning
+Missing argument 2 for Dashboard_Model::__construct(), called in /var/www/vhosts/apps.lifesite.at/htdocs/inc/controllers/class.dashboard_controller.inc.php on line 13 and defined
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/models/class.dashboard_model.inc.php
+Line5
+-----------------------------------------------------------------------------
+Warning
+Missing argument 2 for Dashboard_Model::__construct(), called in /var/www/vhosts/apps.lifesite.at/htdocs/inc/controllers/class.dashboard_controller.inc.php on line 13 and defined
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/models/class.dashboard_model.inc.php
+Line5
+-----------------------------------------------------------------------------
+Database Error
+Function: User_Model::selectUsers / User_Controller::listUsers / Controller::execute / User_Controller::__construct
+MDB2 Error: no such field
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT COUNT(*) AS cnt
+					FROM user u
+					WHERE 1  AND u.deleted = '0'  AND u.parent_id = '0'  AND (0 OR u.name1 LIKE '%wallner%'  OR u.name2 LIKE '%wallner%' )]
+[Native code: 1054]
+[Native message: Unknown column 'u.name1' in 'where clause']
+
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: msg
+File/home/php54-cgi/lib/php/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: msg
+File/home/php54-cgi/lib/php/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: msg
+File/home/php54-cgi/lib/php/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: msg
+File/home/php54-cgi/lib/php/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectBookings / Budget_Controller::listBookings / Controller::execute / Budget_Controller::__construct
+MDB2 Error: no such field
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT COUNT(*) AS cnt
+					FROM app_budget_booking b
+					WHERE 1  AND b.deleted = '0'  AND b.parent_id = '0' ]
+[Native code: 1054]
+[Native message: Unknown column 'b.deleted' in 'where clause']
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectBookings / Budget_Controller::listBookings / Controller::execute / Budget_Controller::__construct
+MDB2 Error: no such field
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*
+				FROM app_budget_booking b
+				WHERE 1  AND b.deleted = '0'  AND b.parent_id = '0'  ORDER BY category asc LIMIT 0, 50 ]
+[Native code: 1054]
+[Native message: Unknown column 'category' in 'order clause']
+
+-----------------------------------------------------------------------------
+Notice
+Use of undefined constant TBL_APP_BUDGET_GROUP - assumed 'TBL_APP_BUDGET_GROUP'
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/models/class.budget_model.inc.php
+Line120
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectGroups / Budget_Controller::listGroups / Controller::execute / Budget_Controller::__construct
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT COUNT(*) AS cnt
+					FROM TBL_APP_BUDGET_GROUP g
+					WHERE 1  AND g.deleted = '0'  AND g.parent_id = '0' ]
+[Native code: 1146]
+[Native message: Table 'appslifesiteat.TBL_APP_BUDGET_GROUP' doesn't exist]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectCategories / Budget_Controller::listCategories / Controller::execute / Budget_Controller::__construct
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT c.*, g.name AS group
+				FROM app_budget_category c
+				LEFT JOIN app_budget_group g ON(g.id = c.group_id)
+				WHERE 1  AND c.deleted = '0'  AND c.parent_id = '0'  ORDER BY name asc LIMIT 0, 50 ]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'group
+				FROM app_budget_category c
+				LEFT JOIN app_budget_group g ON(g.id = ' at line 1]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectCategories / Budget_Controller::listCategories / Controller::execute / Budget_Controller::__construct
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT c.*, g.name AS `group`
+				FROM app_budget_category c
+				LEFT JOIN app_budget_group g ON(g.id = c.group_id)
+				WHERE 1  AND c.deleted = '0'  AND c.parent_id = '0'  ORDER BY group desc LIMIT 0, 50 ]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'group desc LIMIT 0, 50' at line 4]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::optGroupCategory / Budget_Controller::createBooking / Controller::execute / Budget_Controller::__construct
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT c.id, c.name, g.name AS group
+				FROM app_budget_category c
+				LEFT JOIN app_budget_group g ON(g.id = c.group_id)
+				WHERE c.parent_id = '0' AND c.deleted = '0' AND g.parent_id = '0' AND g.deleted = '0' ORDER BY g.name ASC, c.name ASC]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'group
+				FROM app_budget_category c
+				LEFT JOIN app_budget_group g ON(g.id = ' at line 1]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectBookings / Budget_Controller::listBookings / Controller::execute / Budget_Controller::__construct
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT COUNT(*) AS cnt
+					FROM app_budget_booking b
+					LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+					WHERE 1  AND b.deleted = '0' ABD c.deleted = '0' AND c.parent_id = '0'  AND b.parent_id = '0' ]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ABD c.deleted = '0' AND c.parent_id = '0'  AND b.parent_id = '0'' at line 4]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectBookings / Budget_Controller::listBookings / Controller::execute / Budget_Controller::__construct
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT COUNT(*) AS cnt
+					FROM app_budget_booking b
+					LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+					WHERE 1  AND b.deleted = '0' ABD c.deleted = '0' AND c.parent_id = '0'  AND b.parent_id = '0' ]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ABD c.deleted = '0' AND c.parent_id = '0'  AND b.parent_id = '0'' at line 4]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectBookings / Budget_Controller::listBookings / Controller::execute / Budget_Controller::__construct
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT COUNT(*) AS cnt
+					FROM app_budget_booking b
+					LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+					WHERE 1  AND user_id = '1' AND b.deleted = '0'  AND b.parent_id = '0' ]
+[Native code: 1052]
+[Native message: Column 'user_id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectCategories / Budget_Controller::listCategories / Controller::execute / Budget_Controller::__construct
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT COUNT(*) AS cnt
+					FROM app_budget_category c
+					LEFT JOIN app_budget_group g ON(g.id = c.group_id)
+					WHERE 1  AND user_id = '1' AND c.deleted = '0' AND g.deleted = '0' AND g.parent_id = '0'  AND c.parent_id = '0' ]
+[Native code: 1052]
+[Native message: Column 'user_id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::optGroupCategory / Budget_Controller::createBooking / Controller::execute / Budget_Controller::__construct
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT c.id, c.name, g.name AS `group`
+				FROM app_budget_category c
+				LEFT JOIN app_budget_group g ON(g.id = c.group_id)
+				WHERE c.user_id = '1' AND g.user_id = '1' c.parent_id = '0' AND c.deleted = '0' AND g.parent_id = '0' AND g.deleted = '0' ORDER BY g.name ASC, c.name ASC]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c.parent_id = '0' AND c.deleted = '0' AND g.parent_id = '0' AND g.deleted = '0' ' at line 4]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::optGroupCategory / Budget_Controller::createBooking / Controller::execute / Budget_Controller::__construct
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT c.id, c.name, g.name AS `group`
+				FROM app_budget_category c
+				LEFT JOIN app_budget_group g ON(g.id = c.group_id)
+				WHERE c.user_id = '1' AND g.user_id = '1' c.parent_id = '0' AND c.deleted = '0' AND g.parent_id = '0' AND g.deleted = '0' ORDER BY g.name ASC, c.name ASC]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c.parent_id = '0' AND c.deleted = '0' AND g.parent_id = '0' AND g.deleted = '0' ' at line 4]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::optGroup / Budget_Controller::createCategory / Controller::execute / Budget_Controller::__construct
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT * FROM app_budget_group WHERE user_id = '1' parent_id = '0' AND deleted = '0' ORDER BY name ASC]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'parent_id = '0' AND deleted = '0' ORDER BY name ASC' at line 1]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::optGroup / Budget_Controller::createCategory / Controller::execute / Budget_Controller::__construct
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT * FROM app_budget_group WHERE user_id = '1' parent_id = '0' AND deleted = '0' ORDER BY name ASC]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'parent_id = '0' AND deleted = '0' ORDER BY name ASC' at line 1]
+
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: date
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/controllers/class.budget_controller.inc.php
+Line70
+-----------------------------------------------------------------------------
+Notice
+Undefined index: Y
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/controllers/class.budget_controller.inc.php
+Line41
+-----------------------------------------------------------------------------
+Notice
+Undefined index: Y
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/controllers/class.budget_controller.inc.php
+Line41
+-----------------------------------------------------------------------------
+Notice
+Undefined index: 07
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/models/class.budget_model.inc.php
+Line349
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectBookings / Budget_Controller::listBookings / Controller::execute / Budget_Controller::__construct
+MDB2 Error: not found
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT COUNT(*) AS cnt
+					FROM app_budget_booking b
+					LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+					WHERE 1  AND b.user_id = '1' AND b.deleted = '0'  AND b.parent_id = '0'  AND MONT(date) = '7'  AND YEAR(date) = '2013' ]
+[Native code: 1305]
+[Native message: FUNCTION appslifesiteat.MONT does not exist]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectBookings / Budget_Controller::listBookings / Controller::execute / Budget_Controller::__construct
+MDB2 Error: not found
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT COUNT(*) AS cnt
+					FROM app_budget_booking b
+					LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+					WHERE 1  AND b.user_id = '1' AND b.deleted = '0'  AND b.parent_id = '0'  AND MONT(date) = '7' ]
+[Native code: 1305]
+[Native message: FUNCTION appslifesiteat.MONT does not exist]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectBookings / Budget_Controller::listBookings / Controller::execute / Budget_Controller::__construct
+MDB2 Error: truncated
+fetchOne: [Error message: column is not defined in the result set: cnt]
+[Last executed query: SELECT SUM(amount) AS SUM
+					FROM app_budget_booking b
+					LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+					WHERE 1  AND b.user_id = '1' AND b.deleted = '0'  AND b.parent_id = '0'  AND MONTH(date) = '7'  AND YEAR(date) = '2014'  AND type = 'in' ]
+[Native code: 0]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectBookings / Budget_Controller::listBookings / Controller::execute / Budget_Controller::__construct
+MDB2 Error: truncated
+fetchOne: [Error message: column is not defined in the result set: cnt]
+[Last executed query: SELECT SUM(amount) AS SUM
+					FROM app_budget_booking b
+					LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+					WHERE 1  AND b.user_id = '1' AND b.deleted = '0'  AND b.parent_id = '0'  AND MONTH(date) = '7'  AND YEAR(date) = '2014'  AND type = 'in' ]
+[Native code: 0]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectBookings / Budget_Controller::listBookings / Controller::execute / Budget_Controller::__construct
+MDB2 Error: truncated
+fetchOne: [Error message: column is not defined in the result set: cnt]
+[Last executed query: SELECT SUM(amount) AS SUM
+					FROM app_budget_booking b
+					LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+					WHERE 1  AND b.user_id = '1' AND b.deleted = '0'  AND b.parent_id = '0'  AND MONTH(date) = '7'  AND YEAR(date) = '2014'  AND type = 'in' ]
+[Native code: 0]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectStandingOrders / Budget_Controller::listStandingOrders / Controller::execute / Budget_Controller::__construct
+MDB2 Error: no such field
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT s.*, c.name AS category
+				FROM app_budget_standing_order s
+				WHERE 1  AND s.user_id = '1' AND s.deleted = '0'  AND s.parent_id = '0'  ORDER BY title desc LIMIT 0, 250 ]
+[Native code: 1054]
+[Native message: Unknown column 'c.name' in 'field list']
+
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: y
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/controllers/class.budget_controller.inc.php
+Line168
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: m
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/controllers/class.budget_controller.inc.php
+Line168
+-----------------------------------------------------------------------------
+Notice
+Undefined index: category_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/controllers/class.budget_controller.inc.php
+Line214
+-----------------------------------------------------------------------------
+Warning
+date() expects parameter 2 to be long, string given
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/controllers/class.budget_controller.inc.php
+Line216
+-----------------------------------------------------------------------------
+Database Error
+Function: Budget_Model::selectStandingOrders / Budget_Controller::listStandingOrders / Controller::execute / Budget_Controller::__construct
+MDB2 Error: no such field
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT COUNT(*) AS cnt
+					FROM app_budget_standing_order s
+					LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+					WHERE 1  AND s.user_id = '1' AND s.deleted = '0'  AND s.parent_id = '0' ]
+[Native code: 1054]
+[Native message: Unknown column 'b.category_id' in 'on clause']
+
+-----------------------------------------------------------------------------
+Notice
+Undefined property: Budget_Model::$data_per_page
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/models/class.budget_model.inc.php
+Line19
+-----------------------------------------------------------------------------
+Notice
+Undefined index: s
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line15
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+A non well formed numeric value encountered
+File/var/www/vhosts/apps.lifesite.at/htdocs/budget_api.php
+Line20
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined property: stdClass::$jsonrpc
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line119
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::authenticate / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT * FROM TBL_BACKEND_USER WHERE username = 'peter' AND password = '9rktzigl' AND deleted = '0' AND parent_id = '0' AND active = '1']
+[Native code: 1146]
+[Native message: Table 'appslifesiteat.TBL_BACKEND_USER' doesn't exist]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::authenticate / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT * FROM TBL_BACKEND_USER WHERE username = 'peter' AND password = '9rktzigl' AND deleted = '0' AND parent_id = '0' AND active = '1']
+[Native code: 1146]
+[Native message: Table 'appslifesiteat.TBL_BACKEND_USER' doesn't exist]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::_createToken / ProcessRequest::authenticate / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: DELETE FROM user_token WHERE user_id = '']
+[Native code: 1146]
+[Native message: Table 'appslifesiteat.user_token' doesn't exist]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '10'  ORDER BY date DESC  LIMIT 0]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '37'  ORDER BY date DESC  LIMIT 100]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '9'  ORDER BY date DESC  LIMIT 100]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '9'  ORDER BY date DESC  LIMIT 100]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '9'  ORDER BY date DESC  LIMIT 100]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '9'  ORDER BY date DESC  LIMIT 100]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '9'  ORDER BY date DESC  LIMIT 100]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '9'  ORDER BY date DESC  LIMIT 100]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '37'  ORDER BY date DESC  LIMIT 100]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '37'  ORDER BY date DESC  LIMIT 100]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '37'  ORDER BY date DESC  LIMIT 100]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '9'  ORDER BY date DESC  LIMIT 100]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '37'  ORDER BY date DESC  LIMIT 10]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '37'  ORDER BY date DESC  LIMIT 10]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '37'  ORDER BY date DESC  LIMIT 10]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  AND id = '37'  ORDER BY date DESC  LIMIT 10]
+[Native code: 1052]
+[Native message: Column 'id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line171
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line177
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line173
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line179
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line173
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line179
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line173
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line179
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line173
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line179
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line173
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line179
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line173
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line179
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line173
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line179
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line173
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line179
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line173
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line179
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line173
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line179
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line138
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line138
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line138
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line138
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line138
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line134
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line140
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line138
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line138
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line138
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line138
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line131
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line137
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line131
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line137
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line131
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line137
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line131
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line137
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line131
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line137
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line131
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line137
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line131
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line137
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line138
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line138
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: employee_id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line132
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: sql_limit
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line60
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  ORDER BY date DESC  LIMIT -1]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1' at line 4]
+
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: sql_limit
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line60
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  ORDER BY date DESC  LIMIT -1]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1' at line 4]
+
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: sql_limit
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line60
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  ORDER BY date DESC  LIMIT -1]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1' at line 4]
+
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: sql_limit
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line60
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  ORDER BY date DESC  LIMIT -1]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1' at line 4]
+
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: sql_limit
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line63
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0'  ORDER BY date DESC  LIMIT -1]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1' at line 4]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0' AND user_id = '1'  ORDER BY date DESC ]
+[Native code: 1052]
+[Native message: Column 'user_id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: ProcessRequest::getBookingList / call_user_func_array / JsonRpcServer::call / JsonRpcServer::buildResponseObject / JsonRpcServer::getResponseObject / JsonRpcServer::performSingleCall / JsonRpcServer::performCalls / JsonRpcServer::processingRequests
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT b.*, c.name AS category
+        FROM app_budget_booking b
+        LEFT JOIN app_budget_category c ON (c.id = b.category_id)
+        WHERE 1  AND b.parent_id = '0' AND b.deleted = '0' AND user_id = '1'  ORDER BY date DESC ]
+[Native code: 1052]
+[Native message: Column 'user_id' in where clause is ambiguous]
+
+-----------------------------------------------------------------------------
+Notice
+Undefined index: id
+File/var/www/vhosts/apps.lifesite.at/htdocs/inc/classes/class.budget_json_rpc_server.inc.php
+Line145
+-----------------------------------------------------------------------------
+Warning
+Cannot modify header information - headers already sent by (output started at /var/www/vhosts/apps.lifesite.at/htdocs/core/class.core.inc.php:223)
+File/var/www/vhosts/apps.lifesite.at/htdocs/core/libs/jsonrpc/server/JsonRpcServer.php
+Line208
+-----------------------------------------------------------------------------
+Warning
+mysql_connect(): Access denied for user 'peter'@'localhost' (using password: YES)
+File/var/www/app/core/libs/MDB2/Driver/mysql.php
+Line530
+-----------------------------------------------------------------------------
+Database Error
+Function: Core::_initDB / Core::_init / Core::__construct / Controller::__construct / Backend_Controller::__construct / Dashboard_Controller::__construct
+MDB2 Error: connect failed
+_doConnect: [Error message: Access denied for user 'peter'@'localhost' (using password: YES)]
+[Native code: 1045]
+[Native message: Access denied for user 'peter'@'localhost' (using password: YES)]
+
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_data.php
+Line287
+-----------------------------------------------------------------------------
+Notice
+Undefined index: unifunc
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_template.php
+Line442
+-----------------------------------------------------------------------------
+Warning
+filemtime(): stat failed for /var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_resource.php
+Line744
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line26
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line26
+-----------------------------------------------------------------------------
+Warning
+filemtime(): stat failed for /var/www/smarty/templates_c/87044219007c779e15dea1e896742b9f9c33c252.file.b_header.tpl.php
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_resource.php
+Line744
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line68
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line68
+-----------------------------------------------------------------------------
+Warning
+filemtime(): stat failed for /var/www/smarty/templates_c/e5af2b26035229b594248f209c371c38d6faccd8.file.b_footer.tpl.php
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_resource.php
+Line744
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line26
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line26
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line68
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line68
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line26
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line26
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line68
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line68
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line26
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line26
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line68
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line68
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line26
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line26
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line68
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line68
+-----------------------------------------------------------------------------
+Warning
+filemtime(): stat failed for /var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_resource.php
+Line744
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line26
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line26
+-----------------------------------------------------------------------------
+Warning
+filemtime(): stat failed for /var/www/smarty/templates_c/87044219007c779e15dea1e896742b9f9c33c252.file.b_header.tpl.php
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_resource.php
+Line744
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line68
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line68
+-----------------------------------------------------------------------------
+Warning
+filemtime(): stat failed for /var/www/smarty/templates_c/e5af2b26035229b594248f209c371c38d6faccd8.file.b_footer.tpl.php
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_resource.php
+Line744
+-----------------------------------------------------------------------------
+Warning
+filemtime(): stat failed for /var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_resource.php
+Line744
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line26
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line26
+-----------------------------------------------------------------------------
+Warning
+filemtime(): stat failed for /var/www/smarty/templates_c/87044219007c779e15dea1e896742b9f9c33c252.file.b_header.tpl.php
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_resource.php
+Line744
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line68
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line68
+-----------------------------------------------------------------------------
+Warning
+filemtime(): stat failed for /var/www/smarty/templates_c/e5af2b26035229b594248f209c371c38d6faccd8.file.b_footer.tpl.php
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_resource.php
+Line744
+-----------------------------------------------------------------------------
+Warning
+filemtime(): stat failed for /var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_resource.php
+Line744
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line26
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line26
+-----------------------------------------------------------------------------
+Warning
+filemtime(): stat failed for /var/www/smarty/templates_c/87044219007c779e15dea1e896742b9f9c33c252.file.b_header.tpl.php
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_resource.php
+Line744
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line68
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code
+Line68
+-----------------------------------------------------------------------------
+Warning
+filemtime(): stat failed for /var/www/smarty/templates_c/e5af2b26035229b594248f209c371c38d6faccd8.file.b_footer.tpl.php
+File/var/www/app/core/libs/Smarty/sysplugins/smarty_resource.php
+Line744
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line26
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line26
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line68
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line68
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line26
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line26
+-----------------------------------------------------------------------------
+Notice
+Undefined index: ajax
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line68
+-----------------------------------------------------------------------------
+Notice
+Trying to get property of non-object
+File/var/www/smarty/templates_c/87f5bc24b37572a1c7b7664a63b354e4286e6c78.file.b_login.tpl.php
+Line68
+-----------------------------------------------------------------------------
+Notice
+Use of undefined constant TBL_USER_LOGIN - assumed 'TBL_USER_LOGIN'
+File/var/www/app/inc/classes/class.user.inc.php
+Line34
+-----------------------------------------------------------------------------
+Database Error
+Function: User::auth / Backend_Controller::__construct / Home_Controller::__construct
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT * FROM TBL_USER_LOGIN WHERE username = 'peter' AND parent_id = '0' AND deleted = '0']
+[Native code: 1146]
+[Native message: Table 'peter.TBL_USER_LOGIN' doesn't exist]
+
+-----------------------------------------------------------------------------
+Notice
+Undefined index: login_id
+File/var/www/app/inc/classes/class.user.inc.php
+Line21
+-----------------------------------------------------------------------------
+Database Error
+Function: Admin_Model::selectUser / Admin_Controller::listUser / Controller::execute / Admin_Controller::__construct
+MDB2 Error: no such field
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT u.*
+				FROM user u
+				WHERE 1  AND u.deleted = '0'  AND u.parent_id = '0'  ORDER BY name1 asc LIMIT 0, 50 ]
+[Native code: 1054]
+[Native message: Unknown column 'name1' in 'order clause']
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Admin_Model::selectUser / Admin_Controller::listUser / Controller::execute / Admin_Controller::__construct
+MDB2 Error: no such field
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT COUNT(*) AS cnt
+					FROM user u
+					WHERE 1  AND u.deleted = '0'  AND u.parent_id = '0'  AND (0 OR u.name1 LIKE '%test%'  OR u.name2 LIKE '%test%' )]
+[Native code: 1054]
+[Native message: Unknown column 'u.name1' in 'where clause']
+
+-----------------------------------------------------------------------------
+Notice
+Undefined index: active
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line94
+-----------------------------------------------------------------------------
+Notice
+Undefined index: user_id
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line163
+-----------------------------------------------------------------------------
+Notice
+Undefined index: user_id
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line167
+-----------------------------------------------------------------------------
+Notice
+Undefined index: user_id
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line167
+-----------------------------------------------------------------------------
+Notice
+Undefined index: user_id
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line167
+-----------------------------------------------------------------------------
+Notice
+Undefined index: user_id
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line167
+-----------------------------------------------------------------------------
+Notice
+Undefined index: user_id
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line167
+-----------------------------------------------------------------------------
+Notice
+Undefined index: user_id
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line167
+-----------------------------------------------------------------------------
+Database Error
+Function: ACL::__init / ACL::__construct / Backend_Controller::__construct / Admin_Controller::__construct
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT * FROM role_user_login WHERE login_id = '1']
+[Native code: 1146]
+[Native message: Table 'peter.role_user_login' doesn't exist]
+
+-----------------------------------------------------------------------------
+Notice
+Undefined variable: row
+File/var/www/app/inc/classes/class.acl.inc.php
+Line27
+-----------------------------------------------------------------------------
+Notice
+Undefined property: ACL::$isSuperuser
+File/var/www/app/inc/models/class.admin_model.inc.php
+Line210
+-----------------------------------------------------------------------------
+Notice
+Undefined index: role_id
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line200
+-----------------------------------------------------------------------------
+Notice
+Undefined index: user_id
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line147
+-----------------------------------------------------------------------------
+Notice
+Undefined index: user_id
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line152
+-----------------------------------------------------------------------------
+Notice
+Undefined index: user_id
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line153
+-----------------------------------------------------------------------------
+Notice
+Undefined index: user_id
+File/var/www/app/inc/controllers/class.admin_controller.inc.php
+Line154
+-----------------------------------------------------------------------------
+Warning
+require_once(inc/models/class.admin_model.inc.php): failed to open stream: No such file or directory
+File/var/www/app/core/autoload.inc.php
+Line14
+-----------------------------------------------------------------------------
+Database Error
+Function: Settings_Model::selectShippingAddresses / Settings_Controller::listShippingAddresses / Controller::execute / Settings_Controller::__construct
+MDB2 Error: syntax error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: SELECT COUNT(*) AS cnt
+					FROM user_shipping_address u
+					LEFT_JOIN opt_country c ON(c.id = u.country_id)
+					WHERE 1  AND u.deleted = '0' AND user_id = '1'  AND u.parent_id = '0' ]
+[Native code: 1064]
+[Native message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LEFT_JOIN opt_country c ON(c.id = u.country_id)
+					WHERE 1  AND u.deleted = '' at line 3]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: User::writeAuthLog / User::auth / Backend_Controller::__construct / Home_Controller::__construct
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: INSERT INTO TBL_USER_AUTH_LOG (`user_id`, `login_id`, `status`, `username`, `log`, `remote_addr`, `timestamp`) VALUES('1', '2', '0', 'Bernd', 'wrong password', '93.185.143.114', '1395507547')]
+[Native code: 1146]
+[Native message: Table 'peter.TBL_USER_AUTH_LOG' doesn't exist]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: User::writeAuthLog / User::auth / Backend_Controller::__construct / Home_Controller::__construct
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: INSERT INTO TBL_USER_AUTH_LOG (`user_id`, `login_id`, `status`, `username`, `log`, `remote_addr`, `timestamp`) VALUES('1', '2', '1', 'Bernd', 'success', '93.185.143.114', '1395507622')]
+[Native code: 1146]
+[Native message: Table 'peter.TBL_USER_AUTH_LOG' doesn't exist]
+
+-----------------------------------------------------------------------------
+Notice
+Use of undefined constant TBL_USER_AUTH_LOG - assumed 'TBL_USER_AUTH_LOG'
+File/var/www/app/inc/classes/class.user.inc.php
+Line85
+-----------------------------------------------------------------------------
+Database Error
+Function: User::writeAuthLog / User::auth / Backend_Controller::__construct / Home_Controller::__construct
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: INSERT INTO TBL_USER_AUTH_LOG (`user_id`, `login_id`, `status`, `username`, `log`, `remote_addr`, `timestamp`) VALUES('1', '1', '1', 'peter', 'success', '93.185.142.107', '1395509330')]
+[Native code: 1146]
+[Native message: Table 'peter.TBL_USER_AUTH_LOG' doesn't exist]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: User::writeAuthLog / User::auth / Backend_Controller::__construct / Settings_Controller::__construct
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: INSERT INTO TBL_USER_AUTH_LOG (`user_id`, `login_id`, `status`, `username`, `log`, `remote_addr`, `timestamp`) VALUES('1', '2', '0', 'Bernd', 'wrong password', '93.185.143.114', '1395509886')]
+[Native code: 1146]
+[Native message: Table 'peter.TBL_USER_AUTH_LOG' doesn't exist]
+
+-----------------------------------------------------------------------------
+Notice
+Use of undefined constant TBL_USER_AUTH_LOG - assumed 'TBL_USER_AUTH_LOG'
+File/var/www/app/inc/classes/class.user.inc.php
+Line85
+-----------------------------------------------------------------------------
+Database Error
+Function: User::writeAuthLog / User::auth / Backend_Controller::__construct / Home_Controller::__construct
+MDB2 Error: no such table
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: INSERT INTO TBL_USER_AUTH_LOG (`user_id`, `login_id`, `status`, `username`, `log`, `remote_addr`, `timestamp`) VALUES('1', '1', '1', 'peter', 'success', '93.185.142.107', '1395511774')]
+[Native code: 1146]
+[Native message: Table 'peter.TBL_USER_AUTH_LOG' doesn't exist]
+
+-----------------------------------------------------------------------------
+Database Error
+Function: Core::_initDB / Core::_init / Core::__construct / Controller::__construct / Backend_Controller::__construct / Home_Controller::__construct
+MDB2 Error: no such database
+connect: [Error message: Could not select the database: ioat]
+[Native code: 1049]
+[Native message: Unknown database 'ioat']
+
+-----------------------------------------------------------------------------
