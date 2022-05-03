@@ -68,8 +68,6 @@
         </div>
     </div>
 
-
-
     <div class="container d-lg-block mb-4 mt-0">
         <div class="mmm">
             <img class="img-fluid mx-auto d-block" src="/img/start/2b-preis.png">
@@ -252,9 +250,6 @@
 {/if}
 
 {if $lang == 'en'}
-
-
-    <br>
 
     <div class="container d-lg-block mb-4 mt-0 moboff">
         <div class="align-items-center py-4 border-1">
