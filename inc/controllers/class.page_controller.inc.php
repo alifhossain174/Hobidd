@@ -124,8 +124,6 @@ class Page_Controller extends Frontend_Controller
             $this->smarty->assign('pagedata', $pagedata);
         } elseif ($this->alias[2] == 'suche') {
 
-
-
 			// print_r($_POST['filter']['filter_travel_period']);
             // exit;
             $category = $this->model->selectCategories(5);
@@ -133,9 +131,9 @@ class Page_Controller extends Frontend_Controller
 			//print_r($category);
             //exit;
 			
-            // if ($_POST) {
-            //     Utils::redirect('/' . $this->lang . '/kategorie/suche/');
-            // }
+            if ($_POST) {
+                Utils::redirect('/' . $this->lang . '/kategorie/suche/');
+            }
 			$this->smarty->assign('B_searchUmkreis', true);
             $this->smarty->assign('B_searchUmkreisX', true);
 
