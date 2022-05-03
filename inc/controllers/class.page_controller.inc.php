@@ -123,15 +123,23 @@ class Page_Controller extends Frontend_Controller
             $this->smarty->assign('B_del', true);
             $this->smarty->assign('pagedata', $pagedata);
         } elseif ($this->alias[2] == 'suche') {
-			//print_r($_POST);exit;
+
+
+
+			// print_r($_POST['filter']['filter_travel_period']);
+            // exit;
             $category = $this->model->selectCategories(5);
-	            //$category['id'] = '';
-			//print_r($category);exit;
-			if ($_POST) {
-                Utils::redirect('/' . $this->lang . '/kategorie/suche/');
-            }
+	        //$category['id'] = '';
+			//print_r($category);
+            //exit;
+			
+            // if ($_POST) {
+            //     Utils::redirect('/' . $this->lang . '/kategorie/suche/');
+            // }
 			$this->smarty->assign('B_searchUmkreis', true);
             $this->smarty->assign('B_searchUmkreisX', true);
+
+
         } elseif ($this->alias[2] == 'umkreis') {
             $category = $this->model->selectCategories(5);
             $category['id'] = '';
@@ -144,16 +152,7 @@ class Page_Controller extends Frontend_Controller
             $category = $this->model->selectCategories('', $this->alias[2]);
         }
     
-        /*if ($category['id']) {
-                $_banner = $this->model->selectBanner($category['id']);
-                if ($_banner) {
-                    $this->data_per_page = $this->model->data_per_page = 3;
-                }
-            } else {
-                $this->data_per_page = $this->model->data_per_page = 3;
-            }*/
         $this->data_per_page = $this->model->data_per_page = 3;
-
         if (!$this->user->getLogin() || $this->alias[2] != 'meine') {
             $this->filter['is_private'] = 0;
         }
@@ -163,11 +162,8 @@ class Page_Controller extends Frontend_Controller
             $this->filter['postalcode']
         ) : null;
 
-        $this->filter['filter_travel_period'] = isset($this->filter['filter_travel_period']) ? str_replace(
-            '/',
-            '',
-            $this->filter['filter_travel_period']
-        ) : null;
+        $this->filter['filter_travel_period'] = isset($this->filter['filter_travel_period']) ? str_replace('/', '', $this->filter['filter_travel_period']) : null;
+
         $this->filter['filter_category'] = isset($this->filter['filter_category']) ? str_replace(
             '/',
             '',
@@ -175,8 +171,8 @@ class Page_Controller extends Frontend_Controller
         ) : null;
 
         if ($this->filter['postalcode'] != "" || $this->filter['filter_category'] != "" || $this->filter['filter_travel_period'] != "") {
-			//error is here to check
-			//print_r($category);exit;
+			// error is here to check
+			// print_r($category);exit;
             $data = $this->model->selectFilteredAds(
                 ($this->alias[2] == 'suche' ? '' : $category['id']),
                 '',
@@ -207,24 +203,14 @@ class Page_Controller extends Frontend_Controller
                 $this->filter
             );
         }
-	    /*if (!$category['id']) {
-                $data[6] = $data[3];
-            }*/
         $this->crumbs[] = [
             'name' => $category['name'],
             'link' => '/kategorie/' . $category['alias'] . '/',
         ];
         $_SESSION['frontend'][$this->module]['_last_page'] = $_SERVER['REQUEST_URI'];
-        /*if (!$data || !$this->model->offerLocationExists($this->filter['postalcode'])) {
-                $this->smarty->assign('B_noSearchResults', true);
-                $data = $this->model->selectAds('', '', false, false, array(), 10, true);
-                $cnt = $this->model->selectAds('', '', false, true, array(), 10, true);
-            }*/
         if (!is_null($this->filter['filter_category']) && (int)$this->filter['filter_category'] != 0) {
             $newData = [];
             $newCnt = [];
-//            var_dump($data);
-//            exit();
             foreach ($data as $key => $val) {
                 $categoryJSON = json_decode($val['category_json'], true);
                 if (!is_null($val['category_json'])) {
@@ -305,7 +291,7 @@ class Page_Controller extends Frontend_Controller
                 $this->smarty->assign('B_vendor', true);
             }
         }
-//
+
         $data['opt_category'] = $this->model->optCategoryList(isset($this->filter['filter_category']) ? $this->filter['filter_category'] : null);
         $ads_data = $this->model->selectAdsFilter('', '', false, false, [], 0, false, false, false, true);
         $data['opt_travelling_period'] = $this->model->optTravellingPeriodList($ads_data, isset($this->filter['filter_travel_period']) ? $this->filter['filter_travel_period'] : null);

@@ -6,7 +6,6 @@
 		private static $_smarty = null;
 		private static $_instances = 0;
 				
-		
 		public function __construct()
 		{		
 			self::_init();

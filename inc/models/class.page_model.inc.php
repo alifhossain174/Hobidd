@@ -1203,9 +1203,11 @@ class Page_Model extends Frontend_Model
                 $Store = $value->format('F Y');
                 if(!in_array($Store, $data))
                 {
-                    $data[] = $Store;
+                    // $data[] = $Store;
+                    $data[date('Y-m', strtotime($Store))] = $Store;
                 }
             }
+           
             // $data[date('Y-m', strtotime($val['date_from']))] = $travellingPeriod;
         }
         unset($data["-0001-11"]);

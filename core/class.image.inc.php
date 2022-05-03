@@ -3,7 +3,6 @@
 	class Image
 	{
 		public static $image_quality = 65;
-	
 
 		public static function resize($image, $path, $size = 120, $min_width = false, $min_height = false)
 		{
