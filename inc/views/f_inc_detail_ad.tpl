@@ -331,21 +331,37 @@
                         </form>
                     </div>
                 {/if}
+
+                <style>
+                .daterangepicker {
+                    display: block;
+                }
+                </style>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
                 <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
                 <script>
-                    const self = $('input[name="data[desired_date]"]')
+                    const self = $('input[name="data[desired_date]"]');
                     var startDate;
                     var endDate;
+
+                    $( document ).ready(function() {
+                        self.focus();
+                        window.scrollTo(0, 0);
+                    });
+
+                    
+                    
+
                     self.daterangepicker({
-                        applyButtonClasses: 'd-none',
-                        showDropdowns: false,
+                        applyButtonClasses: 'd-block',
+                        showDropdowns: true,
                         opens: "left",
                         drops: "down",
                         autoApply: true,
                         autoUpdateInput: false,
                         singleDatePicker: true,
+                        alwaysShowCalendars: true,
                         // startDate: self.data('start'),
                         // endDate: self.data('end'),
                         minDate: self.data('start'),
@@ -360,6 +376,8 @@
                         endDate = start;
 
                     });
+
+                    window.scrollTo(0, 0);
                 </script>
             {/if}
             
