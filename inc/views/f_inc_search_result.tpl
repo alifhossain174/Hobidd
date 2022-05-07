@@ -96,7 +96,7 @@
 
 
             {if count($data) > 0}
-                <div class="card-deck">
+                <div class="card-deck" style="width: 100%; !important">
                     {foreach from=$data key=key item=val}
                         {if !is_null($val.id) && isset($val.id)}
 

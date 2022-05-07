@@ -19,8 +19,8 @@
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-12 p-0 resizeable">
                                 <div class="form-group">
-                                    {if $lang == 'en'}<label>Destination</label>{else}<label>Reiseziel</label>{/if}
-                                    {* <label for="filter_travel_period">{$translation.destination}</label> *}
+                                    {*<label>Destination</label>*}
+                                    <label for="filter_travel_period">{$translation.destination}</label>
                                     {if $filter.postalcode}
                                         <input id="xsearch" type="text" class="form-control xsearch" name="filter[postalcode]"
                                             value="{$filter.postalcode}"
@@ -40,7 +40,7 @@
                                     <select name="filter[filter_travel_period]"
                                         class="form-control js-example-basic-single seach-dropdown"
                                         id="filter_travel_period">
-                                        <option value="0">{if $lang == 'en'}<span>ALL</span>{else}<span>ALLE</span>{/if}</option>
+                                        <option value="0">{$translation.all}</option>
                                         {$data.opt_travelling_period}
                                     </select>
                                 </div>
@@ -50,7 +50,7 @@
                                     <label for="filter_category">{$translation.categories}</label>
                                     <select name="filter[filter_category]"
                                         class="form-control js-example-basic-single seach-dropdown" id="filter_category">
-                                        <option value="0">{if $lang == 'en'}<span>ALL</span>{else}<span>ALLE</span>{/if}</option>
+                                        <option value="0">{$translation.all}</option>
                                         {$data.opt_category}
                                     </select>
                                 </div>
@@ -259,8 +259,8 @@
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-12 p-0">
                                 <div class="form-group">
-                                    {if $lang == 'en'}<label>Destination</label>{else}<label>Reiseziel</label>{/if}
-                                    {* <label for="filter_travel_period">{$translation.destination}</label> *}
+                                    {*<label>Destination</label>*}
+                                    <label for="filter_travel_period">{$translation.destination}</label>
                                     {if $filter.postalcode}
                                         <input id="xsearch" type="text" class="form-control xsearch" name="filter[postalcode]"
                                             value="{$filter.postalcode}"
@@ -280,7 +280,7 @@
                                     <select name="filter[filter_travel_period]"
                                         class="form-control js-example-basic-single seach-dropdown"
                                         id="filter_travel_period">
-                                        <option value="0">{if $lang == 'en'}<span>ALL</span>{else}<span>ALLE</span>{/if}</option>
+                                        <option value="0">{$translation.all}</option>
                                         {$data.opt_travelling_period}
                                     </select>
                                 </div>
@@ -290,7 +290,7 @@
                                     <label for="filter_category">{$translation.categories}</label>
                                     <select name="filter[filter_category]"
                                         class="form-control js-example-basic-single seach-dropdown" id="filter_category">
-                                        <option value="0">{if $lang == 'en'}<span>ALL</span>{else}<span>ALLE</span>{/if}</option>
+                                        <option value="0">{$translation.all}</option>
                                         {$data.opt_category}
                                     </select>
                                 </div>

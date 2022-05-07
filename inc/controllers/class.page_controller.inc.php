@@ -5,6 +5,7 @@ class Page_Controller extends Frontend_Controller
     protected $data_per_page;
     protected $crumbs = [];
     protected $banner;
+
     public function __construct($module, $start_state, $require_login)
     {
         parent::__construct($module, $start_state, $require_login);
@@ -83,7 +84,15 @@ class Page_Controller extends Frontend_Controller
             $_data[$key]['remaining_p'] = $_p;
         }
         $ads_data = $this->model->selectAdsFilter('', '', false, false, [], 0, false, false, false, true);
+
+
+
         // echo '<pre>',print_r($ads_data),'</pre>';exit();
+        // $lang = $this->lang;
+      
+
+
+
         $_data['opt_category'] = $this->model->optCategoryList(null);
         $_data['opt_travelling_period'] = $this->model->optTravellingPeriodList($ads_data);
         $this->smarty->assign('data', $_data);
@@ -303,6 +312,7 @@ class Page_Controller extends Frontend_Controller
         if ($this->alias[2] == 'umkreis') {
             $this->alias[2] = 'suche';
         }
+
         $this->smarty->assign(
             'page_links',
             Utils::pageLinks($cnt, $this->data_per_page, '/' . $this->lang . '/kategorie/' . $this->alias[2])

@@ -337,7 +337,8 @@ class Page_Model extends Frontend_Model
         }
         if (!empty($filter['filter_travel_period'])) {
             $travelPeriodDate = explode('-', $filter['filter_travel_period']);
-            $sql_where .= " AND MONTH(date_from) = " . $travelPeriodDate[1] . " AND YEAR(date_from) = " . $travelPeriodDate[0] . "";
+            // $sql_where .= " AND MONTH(date_from) = " . $travelPeriodDate[1] . " AND YEAR(date_from) = " . $travelPeriodDate[0] . "";
+            $sql_where .= " AND DATE_FORMAT(date_from, '%Y-%m') <= ". "'" . $filter['filter_travel_period'] . "'" . " AND DATE_FORMAT(date_until, '%Y-%m') >= " . "'" . $filter['filter_travel_period'] . "'" . "";
         }
         if ($featured) {
             $sql_where .= " AND featured_category_id = '" . addslashes($category_id)
@@ -355,7 +356,9 @@ class Page_Model extends Frontend_Model
 				FROM " . TBL_AD . " a
 				LEFT JOIN " . TBL_VENDOR . " v ON(v.id = a.vendor_id)
 				WHERE 1 " . $sql_where . $sql_order . $sql_limit;
-        // print '<br>' . $sql;die();
+
+        // print '<br>' . $sql;exit();
+
         $result = $this->db->query($sql);
         while ($row = $result->fetchRow()) {
             for ($i = 1; $i <= 10; $i++) {
@@ -1269,7 +1272,7 @@ class Page_Model extends Frontend_Model
         $sql_select = "";
         $sql_where = "";
         $sql_order = "";
-//        $sql_limit = (!$id && !$featured ? Utils::limit($this->data_per_page) : '');
+        $sql_limit = (!$id && !$featured ? Utils::limit($this->data_per_page) : '');
         if ($ignore_active == false) {
             $sql_where = " AND (a.active = '1' OR is_offer = '1') AND a.deleted = '0' ";
         }
@@ -1293,7 +1296,9 @@ class Page_Model extends Frontend_Model
         }
         if (!empty($filter['filter_travel_period']) && $filter['filter_travel_period'] != "0") {
             $travelPeriodDate = explode('-', $filter['filter_travel_period']);
-            $sql_where .= " AND MONTH(date_from) = " . $travelPeriodDate[1] . " AND YEAR(date_from) = " . $travelPeriodDate[0] . "";
+            // $sql_where .= " AND MONTH(date_from) = " . $travelPeriodDate[1] . " AND YEAR(date_from) = " . $travelPeriodDate[0] . ""; // prev condition
+            // SELECT * FROM `ad` WHERE DATE_FORMAT(date_from, '%Y-%m') <= '2023-02' AND DATE_FORMAT(date_until, '%Y-%m') >= '2023-02'; 
+            $sql_where .= " AND DATE_FORMAT(date_from, '%Y-%m') <= ". "'" . $filter['filter_travel_period'] . "'" . " AND DATE_FORMAT(date_until, '%Y-%m') >= " . "'" . $filter['filter_travel_period'] . "'" . "";
         }
         if ($count) {
             $sql = "SELECT *,COUNT(*) AS cnt
@@ -1306,7 +1311,10 @@ class Page_Model extends Frontend_Model
 				FROM " . TBL_AD . " a
 				LEFT JOIN " . TBL_VENDOR . " v ON(v.id = a.vendor_id)
 				WHERE 1 " . $sql_where . $sql_order . $sql_limit;
-        //print '<br>' . $sql;
+        
+        // print '<br>' . $sql;
+        // exit();
+
         $result = $this->db->query($sql);
         while ($row = $result->fetchRow()) {
             for ($i = 1; $i <= 10; $i++) {
@@ -1337,6 +1345,8 @@ class Page_Model extends Frontend_Model
         }
         return ($id || !empty($filter['hash']) ? array_shift($ret_val) : $ret_val);
     }
+
+    
     public function deleteDesiredDate($ad_id, $user_id)
     {
         $sql = "DELETE FROM " . TBL_AD_DESIRED_DATE . " WHERE ad_id = '" . addslashes($ad_id) . "' AND user_id = '" . addslashes($user_id) . "'";

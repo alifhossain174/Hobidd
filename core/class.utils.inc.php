@@ -598,7 +598,6 @@ class Utils
 		}
 
 		$ret_val['pagination'] = $data;
-
 		return $ret_val;
 	}
 
